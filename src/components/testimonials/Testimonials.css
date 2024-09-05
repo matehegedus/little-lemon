@@ -1,0 +1,8 @@
+.ratings-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: auto;
+  justify-content: center;
+  width: 100%;
+}

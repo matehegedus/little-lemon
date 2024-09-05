@@ -1,31 +1,26 @@
 import React from "react";
 
 import "./Nav.css";
+import Specials from "../Specials/Specials";
+import { Routes, Route, Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a>Home</a>
-        </li>
-        <li>
-          <a>About</a>
-        </li>
-        <li>
-          <a>Menu</a>
-        </li>
-        <li>
-          <a>Reservations</a>
-        </li>
-        <li>
-          <a>Order Online</a>
-        </li>
-        <li>
-          <a>Login</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav>
+        <Link to="/home">Home</Link>
+        <HashLink smooth to="/home#chicago">
+          About
+        </HashLink>
+        <HashLink smooth to="/home#specials">
+          Menu
+        </HashLink>
+        <Link to="/">Reservations</Link>
+        <Link to="/">Order Online</Link>
+        <Link to="/">Login</Link>
+      </nav>
+    </>
   );
 };
 
