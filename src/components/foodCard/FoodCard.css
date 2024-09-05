@@ -1,0 +1,62 @@
+.food-card {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #edefee;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.food-card img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.food-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.food-card section {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  flex: 1 1;
+}
+
+.food-card .title {
+  font-family: "Marakazi Text";
+  font-weight: medium;
+  font-size: 24px;
+}
+.food-card .description {
+  font-family: "Karla";
+  font-weight: regular;
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+.food-card .order {
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.food-card .price {
+  color: #ee9972;
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.food-card .order-container {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.food-card .order-container img {
+  height: 25px;
+  margin-bottom: 18px;
+}

@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer h3 {
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 800px) {
+  footer {
+    flex-direction: row;
+  }
+}

@@ -1,10 +1,13 @@
 import React from "react";
 
+import "./Footer.css";
+
 const Footer = () => {
   return (
     <footer>
+      <img src="logo.svg"></img>
       <section>
-        Doormat Navigation
+        <h3>Doormat Navigation</h3>
         <ul>
           <li>
             <a>Home</a>
@@ -27,7 +30,7 @@ const Footer = () => {
         </ul>
       </section>
       <section>
-        Contact
+        <h3>Contact</h3>
         <ul>
           <li>
             <a>Address</a>
@@ -41,7 +44,7 @@ const Footer = () => {
         </ul>
       </section>
       <section>
-        Social Media Links
+        <h3> Social Media Links</h3>
         <ul>
           <li>
             <a>Facebook</a>

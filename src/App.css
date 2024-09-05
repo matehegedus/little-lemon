@@ -1,5 +1,12 @@
+:root {
+  --primary-color: #f4ce14;
+  --secondary-color: #495e57;
+}
+
 .App {
   text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .App-logo {

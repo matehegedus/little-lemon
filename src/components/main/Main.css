@@ -1,0 +1,75 @@
+.main-section {
+  display: flex;
+  padding-right: 50px;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+
+.section-description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 15px;
+}
+
+.section-description h1 {
+  color: var(--primary-color);
+  font-family: "Marakazi Text";
+
+  font-weight: 600;
+  font-size: 64px;
+  margin: 0px;
+}
+
+.section-description h2 {
+  color: white;
+  font-family: "Marakazi Text";
+  font-size: 40px;
+}
+
+.section-description p {
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+.section-description .button {
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: medium;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.section-img {
+  top: 50px;
+  position: relative;
+}
+.section-img img {
+  border-radius: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.food-container {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
