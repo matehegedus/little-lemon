@@ -16,7 +16,7 @@ const Nav = () => {
         <HashLink smooth to="/home#specials">
           Menu
         </HashLink>
-        <Link to="/">Reservations</Link>
+        <Link to="/booking">Reservations</Link>
         <Link to="/">Order Online</Link>
         <Link to="/">Login</Link>
       </nav>
