@@ -8,11 +8,13 @@ const BookingForm = ({
 }) => {
   const [guests, setGuests] = useState(2);
   const [date, setDate] = useState("");
-  const [occasion, setOccasion] = useState(null);
 
-  const [time, setTime] = useState("");
+  const occasions = ["Birthday", "Anniversary"];
+  const [occasion, setOccasion] = useState(occasions[0]);
 
-  console.log("availableTimes :>> ", availableTimes);
+  const [time, setTime] = useState(availableTimes[0]);
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     if (date.length > 0) {
@@ -21,11 +23,23 @@ const BookingForm = ({
   }, [date]);
 
   return (
-    <>
+    <section className="booking-form-container">
       <h1>Book Now</h1>
-      <form className="booking-form">
+      <form
+        className="booking-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          onSubmit({
+            date,
+            time,
+            occasion,
+            guests,
+          });
+        }}
+      >
         <label htmlFor="res-date">Choose date</label>
         <input
+          required
           type="date"
           id="res-date"
           onChange={(e) => {
@@ -34,6 +48,7 @@ const BookingForm = ({
         />
         <label htmlFor="res-time">Choose time</label>
         <select
+          required
           onChange={(e) => {
             setTime(Number(e.target.value));
           }}
@@ -63,12 +78,15 @@ const BookingForm = ({
             setOccasion(e.target.value);
           }}
         >
-          <option value={"birthday"}>Birthday</option>
-          <option value={"anniversary"}>Anniversary</option>
+          {occasions.map((occasion) => (
+            <option key={occasion} value={occasion}>
+              {occasion}
+            </option>
+          ))}
         </select>
-        <input type="submit" value="Make Your reservation" onClick={onSubmit} />
+        <input type="submit" value="Make Your reservation" />
       </form>
-    </>
+    </section>
   );
 };
 export default BookingForm;

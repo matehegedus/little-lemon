@@ -1,8 +1,7 @@
 import React from "react";
 
 import "./Nav.css";
-import Specials from "../Specials/Specials";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
@@ -11,7 +10,7 @@ const Nav = () => {
       <nav>
         <Link to="/home">Home</Link>
         <HashLink smooth to="/home#chicago">
-          About
+          About Us
         </HashLink>
         <HashLink smooth to="/home#specials">
           Menu

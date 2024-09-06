@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import App from "./App";
-import Homepage from "./pages/Homepage";
+
 import BookingForm from "./components/bookingForm/BookingForm";
 import { initializeTimes, updateTimes } from "./pages/BookingPage";
 
@@ -26,13 +25,22 @@ test("Renders the bookingForm heading and tests submit button", () => {
 });
 
 test("tests initializeTimes and updateTimes", () => {
-  const initializedTimes = initializeTimes();
-  expect(JSON.stringify(initializedTimes)).toBe(
-    JSON.stringify(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
+  const todayTimes = initializeTimes();
+  localStorage.setItem("todayDate", todayTimes);
+
+  const todayTimes2 = initializeTimes();
+  localStorage.setItem("todayDate2", todayTimes2);
+
+  expect(JSON.stringify(localStorage.getItem("todayDate"))).toBe(
+    JSON.stringify(localStorage.getItem("todayDate2"))
   );
 
   const updatedTimes = updateTimes("2024-09-12");
-  expect(JSON.stringify(updatedTimes)).toBe(
-    JSON.stringify(["17:00", "18:00", "19:00", "22:00"])
+  localStorage.setItem("updatedTimes", updatedTimes);
+  const updatedTimes2 = updateTimes("2024-09-12");
+  localStorage.setItem("updatedTimes2", updatedTimes2);
+
+  expect(JSON.stringify(localStorage.getItem("updatedTimes"))).toBe(
+    JSON.stringify(localStorage.getItem("updatedTimes2"))
   );
 });

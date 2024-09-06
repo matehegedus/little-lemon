@@ -1,0 +1,33 @@
+.booking-confirmed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1;
+  background-color: var(--secondary-color);
+}
+
+.booking-confirmed-container h1 {
+  color: var(--primary-color);
+
+  font-family: "Markazi Text";
+
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 64px;
+}
+
+.booking-confirmed-container h3 {
+  font-family: "Markazi Text";
+  color: white;
+
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.booking-confirmed-container p {
+  font-family: "Karla";
+  color: rgb(219, 219, 219);
+
+  font-size: 16px;
+  font-weight: 100;
+}

@@ -5,6 +5,7 @@ nav {
   font-size: 20px;
   gap: 20px;
   font-weight: bold;
+  align-items: center;
 }
 
 a,

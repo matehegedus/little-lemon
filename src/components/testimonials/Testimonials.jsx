@@ -4,18 +4,26 @@ import "./Testimonials.css";
 
 const Testimonials = () => {
   return (
-    <div>
+    <section className="testimonials">
       <h3>Testimonials</h3>
       <section className="ratings-container">
-        <UserCard rating={5} review={"review text"} name={"Petra"}></UserCard>
+        <UserCard
+          rating={5}
+          review={"Lovely restaurant with nice atmosphere!"}
+          name={"Petra"}
+        ></UserCard>
         <UserCard
           rating={3}
-          review={"review text 2"}
+          review={"Nice restaurant with a bit loud music."}
           name={"Columbo"}
         ></UserCard>
-        <UserCard rating={1} review={"review text 4"} name={"Peter"}></UserCard>
+        <UserCard
+          rating={1}
+          review={"Food arrived cold and the staff is rude. Avoid!"}
+          name={"Peter"}
+        ></UserCard>
       </section>
-    </div>
+    </section>
   );
 };
 

@@ -6,3 +6,9 @@
   justify-content: center;
   width: 100%;
 }
+
+.testimonials {
+  display: grid;
+
+  gap: 20px;
+}
