@@ -4,20 +4,20 @@ import "./FoodCard.css";
 
 const FoodCard = ({ imgSrc, title, price, description }) => {
   return (
-    <div className="food-card">
-      <img width={"100%"} height={150} src={imgSrc}></img>
+    <section className="food-card">
+      <img alt="image-food" width={"100%"} height={150} src={imgSrc}></img>
       <section>
-        <div className="header">
+        <summary className="header">
           <h3 className="title">{title}</h3> <p className="price">${price}</p>
-        </div>
+        </summary>
         <p>{description}</p>
 
-        <div className="order-container">
+        <section className="order-container">
           <h3>Order a delivery</h3>
-          <img src="icon_order.svg"></img>
-        </div>
+          <img alt="icon-order" src="icon_order.svg"></img>
+        </section>
       </section>
-    </div>
+    </section>
   );
 };
 

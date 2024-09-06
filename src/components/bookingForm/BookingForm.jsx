@@ -29,6 +29,7 @@ const BookingForm = ({
         className="booking-form"
         onSubmit={(e) => {
           e.preventDefault();
+
           onSubmit({
             date,
             time,
@@ -62,6 +63,8 @@ const BookingForm = ({
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
+          data-testid="guests"
+          required
           type="number"
           min="1"
           max="10"
@@ -73,7 +76,9 @@ const BookingForm = ({
         />
         <label htmlFor="occasion">Occasion</label>
         <select
+          required
           id="occasion"
+          data-testid="occasion"
           onChange={(e) => {
             setOccasion(e.target.value);
           }}

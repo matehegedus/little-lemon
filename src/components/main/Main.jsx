@@ -16,7 +16,9 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <div className="button">Reserve a Table</div>
+          <div className="button" aria-label="On Click">
+            Reserve a Table
+          </div>
         </section>
 
         <section className="section-img">

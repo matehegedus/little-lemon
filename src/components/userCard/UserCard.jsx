@@ -4,8 +4,8 @@ const UserCard = ({ name, review, rating }) => {
   const ratingArr = new Array(5).fill(1);
 
   return (
-    <div className="user-card-container">
-      <div className="rating">
+    <section className="user-card-container">
+      <summary className="rating">
         {ratingArr.map((elem, idx) => {
           return (
             <img
@@ -16,13 +16,13 @@ const UserCard = ({ name, review, rating }) => {
             />
           );
         })}
-      </div>
+      </summary>
       <section className="profile">
         <img width={45} src="user1.png" alt="user pic"></img>
-        <div>{name}</div>
+        <section>{name}</section>
       </section>
       <section className="review">{review}</section>
-    </div>
+    </section>
   );
 };
 

@@ -44,3 +44,32 @@ test("tests initializeTimes and updateTimes", () => {
     JSON.stringify(localStorage.getItem("updatedTimes2"))
   );
 });
+
+test("tests bookingForm validation", () => {
+  let passedForm = {};
+  render(
+    <BookingForm
+      availableTimes={["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
+      onSubmit={(form) => {
+        passedForm = form;
+      }}
+    />
+  );
+  const headingElement = screen.getByText("Book Now");
+  expect(headingElement).toBeInTheDocument();
+
+  const reserveButton = screen.getByText("Make Your reservation");
+
+  fireEvent.click(reserveButton);
+  expect(passedForm.date.length).toBe(0);
+
+  const noOfGuests = screen.getByTestId("guests");
+  fireEvent.change(noOfGuests, { target: { value: 4 } });
+  fireEvent.click(reserveButton);
+  expect(passedForm.guests).toBe(4);
+
+  const occasion = screen.getByTestId("occasion");
+  fireEvent.change(occasion, { target: { value: "Anniversary" } });
+  fireEvent.click(reserveButton);
+  expect(passedForm.occasion).toBe("Anniversary");
+});

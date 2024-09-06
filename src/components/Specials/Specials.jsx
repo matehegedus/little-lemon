@@ -5,7 +5,7 @@ const Specials = () => {
   return (
     <section id="specials" className="highlights-section">
       <h2>Specials</h2>
-      <div className="food-container">
+      <section className="food-container">
         <FoodCard
           title={"Greek salad"}
           price={12.99}
@@ -29,7 +29,7 @@ const Specials = () => {
           description={`
     This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined`}
         ></FoodCard>
-      </div>
+      </section>
     </section>
   );
 };
