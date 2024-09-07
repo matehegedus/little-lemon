@@ -4,6 +4,7 @@ import "./Main.css";
 import Specials from "../Specials/Specials";
 import Chicago from "../chicago/Chicago";
 import Testimonials from "../testimonials/Testimonials";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -16,13 +17,13 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <div className="button" aria-label="On Click">
+          <Link className="button" aria-label="On Click" to="/booking">
             Reserve a Table
-          </div>
+          </Link>
         </section>
 
         <section className="section-img">
-          <img src="restauranfood.jpg" width={372}></img>
+          <img alt="restaurantFood" src="restauranfood.jpg" width={372}></img>
         </section>
       </section>
       <Specials />

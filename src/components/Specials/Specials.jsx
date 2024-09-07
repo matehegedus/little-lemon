@@ -3,7 +3,7 @@ import FoodCard from "../foodCard/FoodCard";
 
 const Specials = () => {
   return (
-    <section id="specials" className="highlights-section">
+    <article id="specials" className="highlights-section">
       <h2>Specials</h2>
       <section className="food-container">
         <FoodCard
@@ -30,7 +30,7 @@ const Specials = () => {
     This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined`}
         ></FoodCard>
       </section>
-    </section>
+    </article>
   );
 };
 

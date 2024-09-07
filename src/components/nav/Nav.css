@@ -16,6 +16,11 @@ a:active {
   text-decoration: none;
 }
 
+.selected {
+  color: var(--secondary-color) !important;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 800px) {
   nav {
     flex-direction: column;

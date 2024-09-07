@@ -5,19 +5,50 @@ import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
+  const location = useLocation();
+
+  console.log("location :>> ", location);
   return (
     <>
       <nav>
-        <Link to="/home">Home</Link>
-        <HashLink smooth to="/home#chicago">
+        <Link
+          className={`${
+            location.pathname === "/home" && location.hash.length === 0
+              ? "selected"
+              : ""
+          }`}
+          to="/home"
+        >
+          Home
+        </Link>
+        <HashLink
+          className={`${
+            location.pathname === "/home" && location.hash === "#chicago"
+              ? "selected"
+              : ""
+          }`}
+          smooth
+          to="/home#chicago"
+        >
           About Us
         </HashLink>
-        <HashLink smooth to="/home#specials">
+        <HashLink
+          className={`${
+            location.pathname === "/home" && location.hash === "#specials"
+              ? "selected"
+              : ""
+          }`}
+          smooth
+          to="/home#specials"
+        >
           Menu
         </HashLink>
-        <Link to="/booking">Reservations</Link>
-        <Link to="/">Order Online</Link>
-        <Link to="/">Login</Link>
+        <Link
+          className={`${location.pathname === "/booking" ? "selected" : ""}`}
+          to="/booking"
+        >
+          Reservations
+        </Link>
       </nav>
     </>
   );

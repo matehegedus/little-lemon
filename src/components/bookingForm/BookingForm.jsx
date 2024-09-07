@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./BookingForm.css";
+import { Link } from "react-router-dom";
 
 const BookingForm = ({
   availableTimes,
@@ -40,6 +41,7 @@ const BookingForm = ({
       >
         <label htmlFor="res-date">Choose date</label>
         <input
+          className="booking-form-date"
           required
           type="date"
           id="res-date"
@@ -49,6 +51,7 @@ const BookingForm = ({
         />
         <label htmlFor="res-time">Choose time</label>
         <select
+          className="booking-form-select"
           required
           onChange={(e) => {
             setTime(Number(e.target.value));
@@ -63,6 +66,7 @@ const BookingForm = ({
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
+          className="booking-form-number"
           data-testid="guests"
           required
           type="number"
@@ -76,6 +80,7 @@ const BookingForm = ({
         />
         <label htmlFor="occasion">Occasion</label>
         <select
+          className="booking-form-select"
           required
           id="occasion"
           data-testid="occasion"
@@ -91,6 +96,9 @@ const BookingForm = ({
         </select>
         <input type="submit" value="Make Your reservation" />
       </form>
+      <Link className="button" aria-label="On Click" to="/home">
+        Go back to home
+      </Link>
     </section>
   );
 };
