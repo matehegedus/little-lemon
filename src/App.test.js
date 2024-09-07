@@ -2,16 +2,19 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 import BookingForm from "./components/bookingForm/BookingForm";
 import { initializeTimes, updateTimes } from "./pages/BookingPage";
+import { BrowserRouter } from "react-router-dom";
 
 test("Renders the bookingForm heading and tests submit button", () => {
   let newDates = [];
   render(
-    <BookingForm
-      availableTimes={["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
-      onSubmit={() => {
-        newDates = ["17:00", "18:00"];
-      }}
-    />
+    <BrowserRouter>
+      <BookingForm
+        availableTimes={["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
+        onSubmit={() => {
+          newDates = ["17:00", "18:00"];
+        }}
+      />
+    </BrowserRouter>
   );
   const headingElement = screen.getByText("Book Now");
 
@@ -48,12 +51,14 @@ test("tests initializeTimes and updateTimes", () => {
 test("tests bookingForm validation", () => {
   let passedForm = {};
   render(
-    <BookingForm
-      availableTimes={["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
-      onSubmit={(form) => {
-        passedForm = form;
-      }}
-    />
+    <BrowserRouter>
+      <BookingForm
+        availableTimes={["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
+        onSubmit={(form) => {
+          passedForm = form;
+        }}
+      />
+    </BrowserRouter>
   );
   const headingElement = screen.getByText("Book Now");
   expect(headingElement).toBeInTheDocument();
