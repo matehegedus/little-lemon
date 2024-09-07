@@ -7,7 +7,6 @@ import { HashLink } from "react-router-hash-link";
 const Nav = () => {
   const location = useLocation();
 
-  console.log("location :>> ", location);
   return (
     <>
       <nav>

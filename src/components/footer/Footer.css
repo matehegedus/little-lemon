@@ -27,3 +27,14 @@ footer ul {
     flex-direction: row;
   }
 }
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Karla";
+  font-size: 10px;
+  font-weight: bold;
+  align-items: baseline;
+  justify-content: flex-start;
+}
